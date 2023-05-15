@@ -1,0 +1,117 @@
+.confirm-dialog {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #ffffff, #f4f0f0);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .confirm-dialog-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* add margin bottom */
+  }
+
+
+  /* Styles for small screens (up to 599px) */
+@media (max-width: 599px) {
+    .confirm-dialog {
+      max-width: 100%;
+      padding: 20px;
+
+    }
+  }
+  
+  .confirm-dialog-buttons button {
+    margin-right: 10px; /* add margin right to each button */
+  }
+  /* Styles for medium screens (600px - 959px) */
+  @media (min-width: 600px) and (max-width: 959px) {
+    .confirm-dialog {
+      max-width: 75%;
+      /* margin-right: 20px; */
+      margin-left: 100px;
+    }
+  }
+  
+  /* Styles for large screens (960px and up) */
+  @media (min-width: 960px) {
+    .confirm-dialog {
+      max-width: 500px;
+      padding: 20px;
+    }
+  }
+  
+  .confirm-dialog-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  /* Styles for small screens (up to 599px) */
+  @media (max-width: 599px) {
+    .confirm-dialog-buttons {
+      flex-direction: column;
+    }
+  }
+  
+  /* Styles for medium and large screens */
+  @media (min-width: 600px) {
+    .confirm-dialog-buttons {
+      flex-direction: row;
+    }
+  }
+
+
+
+  button.yes:hover {
+    background-color: darkgreen;
+  }
+  
+  button.yes:active {
+    background-color: forestgreen;
+  }
+  
+  button.no:hover {
+    background-color: darkred;
+  }
+  
+  button.no:active {
+    background-color: firebrick;
+  }
+
+
+  button.yes {
+    box-shadow: 0px 0px 10px rgba(125, 248, 94, 0.584);
+    background-color: rgb(124, 230, 124);
+    border: 2px solid rgb(192, 250, 192);
+    color: white;
+    font-size: 1.2rem;
+    padding: 3px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 35px;
+    width:70px;
+  }
+  
+  button.no {
+    box-shadow: 0px 0px 10px rgba(232, 114, 114, 0.633);
+    background-color: rgb(230, 106, 106);
+    border: 2px solid rgb(230, 183, 183);
+    color: white;
+    font-size: 1.2rem;
+    padding: 3px 10px;
+    border-radius: 5px;
+    height: 35px;
+    width:70px;
+  }

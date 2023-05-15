@@ -1,0 +1,206 @@
+.ChatBox-container {
+  background: var(--cardColor);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 14vh 60vh 13vh;
+  /* height: 600px; */
+}
+
+.chat-header {
+  padding: 1rem 1rem 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  overflow: scroll;
+  padding-bottom: 100px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.message {
+  background: linear-gradient(98.63deg, #958268 0%, #7b6868 100%);
+  color: rgb(255, 255, 255);
+  padding: 0.7rem;
+  border-radius: 1rem 1rem 1rem 0;
+  max-width: 28rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message > span:nth-child(2) {
+  font-size: 0.7rem;
+  color: var(--textColor);
+  align-self: end;
+}
+
+@media (max-width: 768px) {
+  .message {
+    max-width: 80%;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+
+.own {
+  align-self: flex-end;
+  border-radius: 1rem 1rem 0 1rem;
+  background: linear-gradient(98.63deg, #6faf77 0%, #588a90 100%);
+}
+
+.chat-sender {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  height: 3.5rem;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 0.8rem; */
+  border-radius: 1rem;
+  /* align-self: end; */
+  position: absolute;
+  bottom: 0;
+  width: 67%;
+}
+
+.chat-sender > input {
+  height: 70%;
+  background-color: rgb(236, 236, 236);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  padding: 0px 15px 0px 15px;
+  /* width: 100%; */
+  max-width: 50%;
+}
+
+/* .chat-sender>div:nth-of-type(1)
+{
+    background: rgb(255, 0, 0);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer
+} */
+
+.chat-sender > div {
+  height: 70%;
+  padding: 0px 15px 0px 15px;
+}
+
+/* followers Card*/
+.FollowersCard {
+  width: 100%;
+  border-radius: 0.7rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  max-height: 10rem;
+}
+.follower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.follower > div {
+  display: flex;
+  gap: 10px;
+}
+
+.followerImage {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.name > span:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.fc-button {
+  height: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.UnfollowButton {
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  cursor: pointer;
+  background: transparent;
+}
+
+.FollowersCard > span {
+  font-weight: bold;
+  color: orange;
+  align-self: center;
+  cursor: pointer;
+}
+
+/* rightSide */
+
+.RightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* button */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgb(248, 175, 39);
+  transition: all 100ms ease-out;
+}
+
+.button:hover {
+  color: rgb(255, 166, 0);
+  border: 2px solid rgb(255, 166, 0);
+  cursor: pointer;
+  background: transparent;
+}
+
+.button:disabled {
+  background: silver;
+  pointer-events: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .FollowersCard {
+      flex-direction: column;
+    }
+    .name {
+      align-items: center;
+      margin-top: 1rem;
+    }
+  }
