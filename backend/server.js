@@ -8,6 +8,7 @@ const providerRoutes = require('./routes/providerRoute')
 const { notFound, errorHandler } = require('./middlewares/errormiddleware');
 const chatRoutes = require('./routes/chatRoutes')
 const messageRoutes = require('./routes/messageRoutes')
+const PORT = process.env.PORT || 5000
 dotenv.config()
 console.log(process.env.API_SECRET);
 connectDB();
@@ -31,4 +32,4 @@ app.use('/api/messages', messageRoutes)
 app.use(notFound);
 app.use(errorHandler);
 
-app.listen(5000, console.log('server started on port 5000'))
+app.listen(PORT, console.log(`server started on port ${PORT}`))
