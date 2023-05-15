@@ -8,7 +8,7 @@ const providerRoutes = require('./routes/providerRoute')
 const { notFound, errorHandler } = require('./middlewares/errormiddleware');
 const chatRoutes = require('./routes/chatRoutes')
 const messageRoutes = require('./routes/messageRoutes')
-const PORT = process.env.PORT || 5000
+const PORT = 5000
 dotenv.config()
 console.log(process.env.API_SECRET);
 connectDB();
