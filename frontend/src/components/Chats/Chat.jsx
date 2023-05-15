@@ -34,7 +34,7 @@ const Chat = () => {
 
   // Connect to Socket.io
   useEffect(() => {
-    socket.current = io("ws://localhost:8800");
+    socket.current = io("https://flashsocket.onrender.com");
     socket.current.emit("new-user-add", userInfo._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
